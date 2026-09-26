@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #eef4ff, #f8faff);
+}
+
+.register-box {
+  width: 100%;
+  max-width: 430px;
+  background: white;
+  padding: 40px;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.register-box h1 {
+  margin: 0;
+  text-align: center;
+  color: #2563eb;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.register-box h2 {
+  margin: 8px 0 30px;
+  text-align: center;
+  color: #222;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.form-group input::placeholder {
+  color: #9ca3af;
+}
+
+.register-box button[type="submit"] {
+  width: 100%;
+  padding: 13px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.register-box button[type="submit"]:hover {
+  background: #1d4ed8;
+}
+
+.register-box button[type="submit"]:active {
+  transform: scale(0.99);
+}
+
+.register-box p {
+  margin: 25px 0 0;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.register-box a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-box a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+  .register-container {
+    padding: 20px 15px;
+  }
+
+  .register-box {
+    padding: 30px 22px;
+    border-radius: 14px;
+  }
+
+  .register-box h1 {
+    font-size: 25px;
+  }
+
+  .register-box h2 {
+    font-size: 21px;
+  }
+
+}

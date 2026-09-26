@@ -1,0 +1,59 @@
+<div class="register-container">
+
+  <div class="register-box">
+
+    <h1>Task Manager</h1>
+    <h2>Create Account</h2>
+
+    <form (ngSubmit)="register()">
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          [(ngModel)]="name"
+          placeholder="Enter your name"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          [(ngModel)]="email"
+          placeholder="Enter your email"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          [(ngModel)]="password"
+          placeholder="Create a password"
+          required
+        >
+      </div>
+
+      <button type="button" (click)="register()">
+        Register
+      </button>
+
+    </form>
+
+    <p>
+      Already have an account?
+      <a href="/login">Login</a>
+    </p>
+
+  </div>
+
+</div>

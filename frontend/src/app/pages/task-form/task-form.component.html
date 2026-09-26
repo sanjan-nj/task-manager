@@ -1,0 +1,126 @@
+<div class="task-form-container">
+
+  <div class="task-form-box">
+
+    <h2>
+      {{ isEditMode ? 'Edit Task' : 'Create New Task' }}
+    </h2>
+
+    <form (ngSubmit)="saveTask()">
+
+      <!-- Title -->
+      <div class="form-group">
+
+        <label for="title">Task Title</label>
+
+        <input
+          id="title"
+          type="text"
+          name="title"
+          [(ngModel)]="title"
+          placeholder="Enter task title"
+          required
+        >
+
+      </div>
+
+
+      <!-- Description -->
+      <div class="form-group">
+
+        <label for="description">Description</label>
+
+        <textarea
+          id="description"
+          name="description"
+          [(ngModel)]="description"
+          rows="4"
+          placeholder="Enter task description"
+        ></textarea>
+
+      </div>
+
+
+      <!-- Due Date -->
+      <div class="form-group">
+
+        <label for="dueDate">Due Date</label>
+
+        <input
+          id="dueDate"
+          type="date"
+          name="dueDate"
+          [(ngModel)]="dueDate"
+          required
+        >
+
+      </div>
+
+
+      <!-- Priority -->
+      <div class="form-group">
+
+        <label for="priority">Priority</label>
+
+        <select
+          id="priority"
+          name="priority"
+          [(ngModel)]="priority"
+          required
+        >
+
+          <option value="">Select Priority</option>
+          <option value="LOW">Low</option>
+          <option value="MEDIUM">Medium</option>
+          <option value="HIGH">High</option>
+
+        </select>
+
+      </div>
+
+
+      <!-- Category -->
+      <div class="form-group">
+
+        <label for="category">Category</label>
+
+        <select
+          id="category"
+          name="category"
+          [(ngModel)]="category"
+          required
+        >
+
+          <option value="">Select Category</option>
+          <option value="PERSONAL">Personal</option>
+          <option value="WORK">Work</option>
+          <option value="STUDY">Study</option>
+
+        </select>
+
+      </div>
+
+
+      <!-- Buttons -->
+      <div class="form-buttons">
+
+        <button
+          type="button"
+          (click)="cancel()"
+        >
+          Cancel
+        </button>
+
+        <button type="submit">
+
+          {{ isEditMode ? 'Update Task' : 'Create Task' }}
+
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
